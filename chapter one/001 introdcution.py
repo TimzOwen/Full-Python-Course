@@ -190,4 +190,46 @@ if waether_Cold:
 else:
    print("Hot")
 
-===================================================================================lates commit
+
+
+
+# example two
+is_hot = True
+is_cold = False
+
+if is_cold:
+    print("Wear your jacket")
+elif is_hot:
+    print("Go swimming")
+else:
+    print("Time for a movie, cool weather")
+
+
+# challenge
+# A middle man owns $10 million stock. 
+# a business man will deposit 30% if he/she has bank balance wother $500 Million with the rest as installments
+# Else if the business man has balance less than $500 , he pays full amount with no installments
+
+person_one_balance = 600
+person_two_balance = 230
+
+if person_two_balance>500:
+    print("you will pay $10 with installments")
+elif person_two_balance<500:
+    print(you will pay in full amount)
+print("Business complete")
+
+
+# EXAMPLE 3
+# calculate the deposit amount for propety worth $5000 if the deposit rate if 30% for account with enought credit
+propertyCash = 500000
+has_credit = True
+
+if has_credit:
+    print("You are allowed to transact")
+    deposit = propertyCash * 0.3
+    deposit = (deposit/100)
+else:
+    print("Load your Account to be allowed to transact")
+print("The deposit amount is $ {} ",deposit )
+
