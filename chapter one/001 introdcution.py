@@ -410,3 +410,60 @@ while command != "quit":
 
 
 
+
+# Lesson 11
+# For Loop
+# Used to interate through items or collections or any sequence
+
+for item in "Python Course":
+    print(item) # prints each character separately
+
+for languages in ["python","Java","java Script","JQuery","PHP"]:
+    print(languages)
+
+for x in range(10):
+    print(x) # prints number between 0-10 minus 9 (n-1)
+
+for x in range(10,20):
+    print(x) # prints from starting to end range
+
+for x in range(1,20, 4):
+    print(x) # prints items ranging from 1-20 in multiples of 4
+
+
+# challenge:
+# calculate total number of students in a school with 5 classes with grdaes  1= 30, 2=40,3=60,4=65,5=12:
+
+school = [30,40,60,65,12]
+total_students = 0
+for grade in school:
+    total_students += grade
+print(f"Total number of Students: {total_students}")
+
+
+
+## Lesson 12
+# Nested Loop
+# using for loop, generate a place x,y cordinate
+for x in range(5):
+    for y in range (4):
+        for z in range (3):
+            print(f"({x}, {y}, {z})") # prints all cordiantes in "xyz"
+
+challenge, printing letter F with "xxx" usinf For loop
+show complete task and let students write Code
+
+# without for loop
+numbers  = [5,2,5,2,2]
+for x in numbers:
+    print('x'*x)
+    
+# using nested For Loop
+numbers = [5,2,5,2,2]
+for x_count in numbers:
+    output = ""
+    for count in range(x_count):
+        output += "x"
+    print(output)
+
+
