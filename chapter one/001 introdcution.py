@@ -233,3 +233,76 @@ else:
     print("Load your Account to be allowed to transact")
 print("The deposit amount is $ {} ",deposit )
 
+# LESSON 9
+# LOGICAL OPERATORS
+# used in situations where we have multiple choices to make a condietion/decision
+
+#AND--> used when both conditions are true
+had_good_grades = True
+graduate = True
+
+if had_good_grades and graduate:
+    print("You have the job")
+else:
+    print("You are not qualified")
+
+
+# OR --> Used when one of the conditions are true 
+
+if had_good_grades or graduate:
+    print("You are welcome but must work hard")
+else:
+    print("Go back to school!!!!")
+
+
+# NOT
+# Does the opposite of the given permision
+
+has_loan = True
+create_account = True
+
+if has_loan and not create_account:
+    print("Account will be created") # no output because create account now has a False value
+
+
+# Comparison Operators
+
+# Greater than (>)
+age = 18
+if age>18:
+    print("You can travel alone")
+else:
+    print("Parent must accompany you")
+
+#  >=, <= , ==, != 
+age = 20 
+
+if age == 20:
+    print("you are youth")
+elif age>0 and age<20:
+    print("you are still young")
+elif age>20 and <=100:
+    print("you are a citizen of the nation, pay tax")
+else:
+    print("Enter appropriate number of your age")
+
+# Challenge one :
+# Create a program using comparison operators that will make sure a password entered by a user 
+# has at leas 4 character, not more than 8 characters 
+# If lenght of password is ok, print "Strong password", less char print("cannot be less than len"), more char
+# print("cannot be more than 8 character")
+
+
+# Challenge two :
+# check output and write a program to do as demonstrated
+weight = int(input("Enter your Weight: "))
+l_or_k = input("K ()kgs or L ()lbs")
+if l_or_k.lower() == "k":
+    final_weight = weight / 0.45
+    print("you are {} kgs".format(final_weight))
+elif l_or_k.lower == "l":
+    final_weight = weight * 0.45
+    print(f"you are {final_weight} lbs")
+else:
+    print("Enter correct character")
+
