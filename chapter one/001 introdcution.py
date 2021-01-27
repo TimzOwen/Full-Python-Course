@@ -306,3 +306,107 @@ elif l_or_k.lower == "l":
 else:
     print("Enter correct character")
 
+    
+# LESSON 10
+
+# While Loops
+# used to execute a task as long as the conditon still remains true
+# execute a block multiple times 
+x = 10
+
+while x <= 10:
+    print(x)
+    x = x + 1
+print("End of Loop")
+
+
+# Challenge one 
+# print Right angle Triangle with asterisks using for loop
+
+i = 5
+while i <= i:
+    print("*" * i)
+    i += 1
+print("Complete")
+
+
+
+# challenge 2;
+# The Guesing game using compbined lessons taught:
+# create a guessing game that allows user input and validates the inout arcording to the specified range:
+
+guess_number = 5
+guess_limit = 3
+guess_count = 0
+
+while guess_count < guess_limit:
+
+    guess = int(input("Enter your Guess Number ! "))
+    guess_count += 1
+    if guess == guess_number:
+        print("You won!! ")
+        break
+else:
+    print("You lost")
+
+
+
+
+
+# Challenge 3
+# The Car Game:
+
+# solution
+command = ""
+while command != "quit":
+    command = input("> ").lower()
+    if command =="start":
+        print("Car started....")
+    elif command == "stopped":
+        print("car stopped...")
+    elif command=="help":
+        print("""
+        start -> starts the car
+        stop -> stops the car
+        quit -> exits the game
+        """)
+    elif command == "quit":
+        print("Game over")
+        break
+    else:
+        print("Command not Found! try Again!!")
+
+# solution
+# more simplified boolean solution
+# 
+
+command = ""
+started = False
+while command != "quit":
+    command = input("> ").lower()
+    if command =="start":
+        if started:
+            print("car is already started..")
+            started = True
+        else:
+            print("Car started....")
+    elif command == "stopped":
+        if not started:
+            print("Car already stopped")
+            started = False
+        else:
+            print("car stopped...")
+    elif command=="help":
+        print("""
+        start -> starts the car
+        stop -> stops the car
+        quit -> exits the game
+        """)
+    elif command == "quit":
+        print("Game over")
+        break
+    else:
+        print("Command not Found! try Again!!")
+
+
+
