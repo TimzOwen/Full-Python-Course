@@ -18,3 +18,14 @@
 # Challenge 
 # create a numbers iteration loop to find the largest
 # make sure to have sepate modules
+
+
+
+
+
+# PACKAGES
+# This is a way of organizing your large projects
+# This is a container for multiple modules
+ # check VS Code for the package modules
+ 
+ 
