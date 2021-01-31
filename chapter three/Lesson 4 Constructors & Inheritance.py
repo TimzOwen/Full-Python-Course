@@ -106,4 +106,14 @@ print(max_number(numbers))
 
 
 # THE TBELOW CODE GOED TO A NEW FILE AND IMPORT
+# CREATE A NEW FILE AND ADD THE CODE BELOW AND USE IT IN THE ABOVE MAIN FILE TO IMPORT
 
+# calculate the max in the list 
+
+def max_number(numbers):
+    current_num = numbers[0]
+    for x in numbers:
+        if x > current_num:
+            current_num = x
+    return current_num
+    print(f"Maximun number in the List is: {current_num} ")
