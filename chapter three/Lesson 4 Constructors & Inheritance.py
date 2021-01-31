@@ -83,3 +83,27 @@ subaru1.subaru_model("Subaru Forester")
 subaru1.highest_speed("350km/hr")
 
 
+
+# INHERITANCE
+
+# use import to execute the code
+
+import converter, numbersList
+
+from converter import lbs_to_kg, calculator
+from numbersList import max_number
+
+print(lbs_to_kg(500))  # specific function import 
+
+print(converter.kgs_to_lbs(100)) # unimported module 
+
+print(calculator(10))  # specific function import 
+
+numbers = [10,40,70,4,50] # input for numbers  Modules
+print(max_number(numbers)) 
+
+
+
+
+# THE TBELOW CODE GOED TO A NEW FILE AND IMPORT
+
