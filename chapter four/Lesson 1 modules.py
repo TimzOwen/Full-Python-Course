@@ -1,4 +1,7 @@
 
+# N/B :
+# CHECK ON THE MODULES FOR THE IMPORTED MODULES AND PACKAGES
+
 
 ## Python Modules
 # Modules helps us organize code in multiple Files
