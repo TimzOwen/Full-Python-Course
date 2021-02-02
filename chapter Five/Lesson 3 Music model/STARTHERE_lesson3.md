@@ -1,12 +1,12 @@
 
 ### Get to follow the order of the lesson
 
-Start with step one;
+Start with __step 1__
 
-  Training the model
+  __Training__ the model
  
  Proceed to __step 2__ 
  
-  Testing accuracy
+  __Testing model accuracy__
   
   The __baisc model__ is just a snapshot of how a simple model training looks like.
