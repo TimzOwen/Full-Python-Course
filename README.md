@@ -21,3 +21,12 @@
     Dictionaries,List,arrays,2-D Arrays
     Data structures
     
+
+#### Intalling Python.
+
+[Download and instal Python](https://www.python.org/downloads/)
+
+[Install visual studio Code](https://code.visualstudio.com/download)
+
+[Install Pycharm](https://www.jetbrains.com/pycharm/download/)
+
