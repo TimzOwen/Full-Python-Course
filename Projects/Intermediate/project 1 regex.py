@@ -75,4 +75,22 @@ print("help line 3: " + final_output.group(2)) # this prints the second shift
 print("full help line number: " + final_output.group(0)) # 0 prints all the number in the format
 
 
+# using pipe to find occurance of a pattern in search
+
+import re
+
+names = re.compile(r'timz | owen | ninja')
+found_name = names.search("Hi, my name is timz owen the code ninja")
+print(found_name.group()) # returns fisrt occurance of a pattern incases where there are more than one occurance
+
+
+# pipe matching with different patterns
+# using pipe to find occurance of a pattern in search
+
+import re
+
+names = re.compile(r'bat(man | tle | ing)')
+found_name = names.search("The batman today decide he will be bating before the battle")
+print(found_name.group())
+print(found_name.group(1))
 
