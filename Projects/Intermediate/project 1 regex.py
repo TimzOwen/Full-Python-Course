@@ -55,3 +55,24 @@ print("phone number found: " + mo.group())
 kenya_phon = re.compile(r'\d{3}-\d{3}-\d{6}')
 phone = kenya_phon.search("This is the phone number 254-740-354167 to call for help")
 print("Help number: " + phone.group())
+
+
+
+# perform group matching
+# group matching:
+# print a phone number in two group matching
+
+# group matching:
+# print a phone number in two group matching
+
+import re
+
+phone_number = re.compile(r'(\d{3})-(\d{4}-\d{4})')
+final_output = phone_number.search('my number is 254-7403-4167 for any help desk inquiries')
+print("Help line number is: " + final_output.group())
+print("help line 2: "+ final_output.group(1)) # prints the number 1 from the first brackets of the hyphen.
+print("help line 3: " + final_output.group(2)) # this prints the second shift
+print("full help line number: " + final_output.group(0)) # 0 prints all the number in the format
+
+
+
