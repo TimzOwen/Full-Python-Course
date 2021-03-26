@@ -94,3 +94,40 @@ found_name = names.search("The batman today decide he will be bating before the 
 print(found_name.group())
 print(found_name.group(1))
 
+
+# matching with question mark.
+# check if the match character is there or not.
+import re
+
+batRex = re.compile(r'Bat(wo)?man')
+mo1 = batRex.search('The adventures of Batman')
+print(mo1.group())  # Batman
+mo2 = batRex.search("the adventures of Batwoman")
+print(mo2.group())  # Batwoman
+
+
+# matching with question mark.
+# check if the match character is there or not.
+import re
+
+phone_number = re.compile(r'(\d{3}-)?\d{3}-\d{4}')
+mo1 = phone_number.search("The help line is 254-740-3541 for school of Engineering. while that of emergency is 740-3542")
+print(mo1.group()) # returns 254-740-3541
+mo2 = phone_number.search("new number is 254-6767")
+print(mo2.group()) # returns 254-6767
+
+# matching zero or more with the start / asterisk
+import re
+
+quiz = re.compile(r'bat(wo)*man')
+mo = quiz.search("The is no batman")
+mo2 = quiz.search("Neith batwoman is ")
+mo3 = quiz.search("The is triple wo for batwowowoman")
+print(mo.group())
+print(mo2.group())
+print(mo3.group())
+    # batman
+    # batwoman
+    # batwowowoman
+    
+    
