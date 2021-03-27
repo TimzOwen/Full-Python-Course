@@ -130,4 +130,22 @@ print(mo3.group())
     # batwoman
     # batwowowoman
     
-    
+# matching zero or more with the plus (+)
+# Must appear at least once else returns false.
+import re
+
+quiz = re.compile(r'bat(wo)+man')
+mo = quiz.search("The is no batman")
+mo == None # use double equal sign to run and no group during printing. Assign to None acmd check its boolean
+mo2 = quiz.search("Neith batwoman is ")
+mo3 = quiz.search("The is triple wo for batwowowoman")
+print(mo)
+print(mo2.group())
+print(mo3.group())
+    # True  
+    # batwoman
+    # batwowowoman
+
+# matching repetition with curl brackets
+# this enables you to match repeated formats
+
