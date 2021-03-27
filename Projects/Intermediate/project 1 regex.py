@@ -199,3 +199,15 @@ n_phone = new_phone.findall("new 255-440-4040 to old 455-555-4545 number")
 print(n_phone)          # [('255', '440', '4040'), ('455', '555', '4545')]
 
 
+
+
+# character classes combination 
+# check read me for all its explantion
+# What the expression means is, start with numeric from 0-9, then a space or special character then a word.
+
+import re
+
+xmas_re = re.compile(r'\d+\s\w+')
+mas = xmas_re.findall(" mr timz owen, 19 years of age, student developer, loves eating 50 chapos, can code till 12:00 am, and cool ")
+print(mas)
+
