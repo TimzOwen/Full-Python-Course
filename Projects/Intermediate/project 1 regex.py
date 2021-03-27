@@ -149,3 +149,20 @@ print(mo3.group())
 # matching repetition with curl brackets
 # this enables you to match repeated formats
 
+import re
+
+laughter = re.compile(r'(ha){3}')
+laughter2 = re.compile(r'(ha){4,}')
+laughter3 = re.compile(r'(ha){2,5}')
+laughter4 = re.compile(r'(ha){,3}')
+
+laugh = laughter.search("He laughed hahahahaha before repeating hahaha " )
+lugh2 = laughter2.search(" the laught haha before hahahahahahahahahaha")
+laugh3 = laughter3.search(" so i laughed hahahahahahahahaha then haha and hahahahaha ")
+laugh4 = laughter4.search(" now laughin ha ")
+
+print(laugh.group())
+print(lugh2.group())
+print(laugh3.group())
+print(laugh4.group())
+
