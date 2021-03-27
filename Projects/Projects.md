@@ -29,3 +29,21 @@ __pipe__ ---> '|' -->used to return a match one of many expression.
 
 
 
+
+### Character classes
+
+__\d__: --> Anu numeric digit from 0-9
+
+__\D__: ---> Any character that is not numeric from 0-9
+
+__\w__: ---> Any letter, numeric digit, or the underscore character.
+
+        Think of it as matching "Word" character
+
+__\W__: ---> Any character that is not numeric, letter or underscore        
+
+__\s__: ---> Any space, tab on new line.
+
+        Think of it as matching "space" characters
+
+__\S__: ---> Any character that is not space,tab or new line
