@@ -166,3 +166,36 @@ print(lugh2.group())
 print(laugh3.group())
 print(laugh4.group())
 
+
+# The GREEDY AND NON-GREEDY ? QUESTION MARK
+# The greedy question mark returns the longest match in string
+# the non-greedy returns the shortest in a match
+
+import re
+
+non_greedy = re.compile(r'(ha){3,6}?')
+greedy = re.compile(r'(ha){3,5}')
+
+gree = greedy.search(" haha in hahahahaha ")
+non_gre = non_greedy.search(" not haha and hahahahaha ")
+
+print(gree.group())     # hahahahaha
+print(non_gre.group())  # hahaha
+
+
+
+# find all Method
+# this returns all the match character of a string in fom is alist
+# while printing do not attache the group () method , only pass in the finadall method and will print automatically
+import re
+
+phone = re.compile(r'\d{3}-\d{3}-\d{4}')  # returnsn a list because there is no groups
+pn = phone.findall("The number is 255-504-4900 or help line number is 293-384-4949") # has no groups
+print(pn)       # ['255-504-4900', '293-384-4949']
+
+# the find all with groups
+new_phone = re.compile(r'(\d{3})-(\d{3})-(\d{4})') # this now has groups and returns tuples where each element is a list 
+n_phone = new_phone.findall("new 255-440-4040 to old 455-555-4545 number")
+print(n_phone)          # [('255', '440', '4040'), ('455', '555', '4545')]
+
+
