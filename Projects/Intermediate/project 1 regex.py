@@ -248,3 +248,27 @@ import re
 regX = re.compile('[^aeiou0-4]')
 words = regX.findall("My name is Timz @ Gmail 78903")
 print(words)    # ['M', 'y', ' ', 'n', 'm', ' ', 's', ' ', 'T', 'm', 'z', ' ', '@', ' ', 'G', 'm', 'l', ' ', '7', '8', '9']
+
+
+
+# Caret and Dollar Sign
+# $ --> the words searched must end with the matched pattern
+# ^ --> the words must start with a certain pattern
+# ^ and $  --> start and end with the matched pattern
+
+import re
+
+nameRex = re.compile(r'^\d+$')
+test1 = nameRex.search("my name is 0705xyz90") == None # Returns false because there exists the pattern
+test2 = nameRex.search("today is date 04/04/20201 and not 05June") == None # Returns False because there exist
+test3 = nameRex.search("No Kenyas here with Id number")  == None
+print(test2)
+print(test1)
+print(test3)
+
+
+wholeStringIsNum = re.compile(r'^\d+$')
+wholeStringIsNum.search('12345678900')
+print(wholeStringIsNum.search('12345xyz67890') == None)
+print(wholeStringIsNum.search('12 34567890') == None)
+
