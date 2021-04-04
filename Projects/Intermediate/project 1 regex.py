@@ -272,3 +272,13 @@ wholeStringIsNum.search('12345678900')
 print(wholeStringIsNum.search('12345xyz67890') == None)
 print(wholeStringIsNum.search('12 34567890') == None)
 
+# The wildCard Character
+# .dot---> the wildcard
+# used to match any character except for the new line
+# \ --> used to escape characters that include the dot.
+import re
+
+atRegx = re.compile(r'.at')
+print((atRegx.findall('the hat and cat lives on the flat houses and mat\.')))
+
+
