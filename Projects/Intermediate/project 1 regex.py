@@ -293,3 +293,30 @@ name1 = nameRegx.search('FirstName: Timz  LastName: Owen')
 print(name1.groups())
 print(name1.group(1))
 print(name1.group(2))
+
+
+
+# Dot-Star Non-greedy
+import re
+
+nameRegx = re.compile(r'<.*?>') # Pattern matches the shortest 
+name1 = nameRegx.search('FirstName: <Timz owen> and LastName: is  Owen> ')
+print(name1.group())
+nameRegxGreedy = re.compile(r'<.*>')    # Matches the longest patter -GREEDY
+name2 = name1 = nameRegxGreedy.search('FirstName: <Timz owen> and LastName: is  Owen> ')
+print(name2.group())
+
+
+# Matching new Lines with the DOT-STAR
+# 're.DOTALL' as the second argument ot the re.compile
+# This will match pattern to the next lines
+
+import re
+
+multilineRegx = re.compile(r'.*')
+output = multilineRegx.search('my name is \nTimz and am from \nKabarak ')
+print(output.group())   # my name is
+
+multilineRegx2 = re.compile(r'.*',re.DOTALL)
+output2 = multilineRegx2.search('my name is \nTimz and am from \nKabarak ')
+print(output2.group()) # print all
