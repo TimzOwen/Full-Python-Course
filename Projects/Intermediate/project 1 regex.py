@@ -282,3 +282,14 @@ atRegx = re.compile(r'.at')
 print((atRegx.findall('the hat and cat lives on the flat houses and mat\.')))
 
 
+# matching everything with DOT-STAR
+# '.'-->  matches anything except for the new lines
+# '.*' --> Mathces more than one charcater
+
+import re
+
+nameRegx = re.compile(r'FirstName: (.*) LastName: (.*)')
+name1 = nameRegx.search('FirstName: Timz  LastName: Owen')
+print(name1.groups())
+print(name1.group(1))
+print(name1.group(2))
