@@ -211,3 +211,21 @@ xmas_re = re.compile(r'\d+\s\w+')
 mas = xmas_re.findall(" mr timz owen, 19 years of age, student developer, loves eating 50 chapos, can code till 12:00 am, and cool ")
 print(mas)
 
+# defining your own character classes
+# involves using square brackets
+# Example matching aeiouAEIOU vowels both in capital and small letters
+
+import re
+
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+words = vowelRegex.findall("My name is TIMZ OWEN from KABARAK UNIVERSITY Oooooh")
+print(words)   # ['a', 'e', 'i', 'I', 'O', 'E', 'o', 'A', 'A', 'A', 'U', 'I', 'E', 'I', 'O', 'o', 'o', 'o', 'o']
+
+
+# Character combination with integer numbers from 0-9
+import re
+
+vowelRegex = re.compile(r'[\dAEIOU]')
+words = vowelRegex.findall("My name is TIMZ OWEN and phone is 07403541 6740")
+print(words)   # ['a', 'e', 'i', 'I', 'O', 'E', 'o', 'A', 'A', 'A', 'U', 'I', 'E', 'I', 'O', 'o', 'o', 'o', 'o']
+
