@@ -355,3 +355,16 @@ case3 = caseRegx.search('Napenda kenya')
 print(case1.group())    #KENYA
 print(case2.group())    #Kenya
 print(case3.group())    #kenya
+
+
+# use re.IGNORECASE
+import re
+
+caseRegx = re.compile(r'kenya', re.IGNORECASE)
+case1 = caseRegx.search('KENYA is my country')
+case2 = caseRegx.search('I love Kenya')
+case3 = caseRegx.search('Napenda kenya')
+
+print(case1.group())    #KENYA
+print(case2.group())    #Kenya
+print(case3.group())    #kenya
