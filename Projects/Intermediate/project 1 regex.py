@@ -229,3 +229,22 @@ vowelRegex = re.compile(r'[\dAEIOU]')
 words = vowelRegex.findall("My name is TIMZ OWEN and phone is 07403541 6740")
 print(words)   # ['a', 'e', 'i', 'I', 'O', 'E', 'o', 'A', 'A', 'A', 'U', 'I', 'E', 'I', 'O', 'o', 'o', 'o', 'o']
 
+
+# matching characters in a range
+import re
+
+# matching specific characters in a range (below matches 0-5 and all alphabetic in capital and small letter
+vowelRegex = re.compile(r'[a-zA-Z0-5]')
+words = vowelRegex.findall("I am TIMZ OWEN  07403541 6740")
+print(words)   # ['a', 'e', 'i', 'I', 'O', 'E', 'o', 'A', 'A', 'A', 'U', 'I', 'E', 'I', 'O', 'o', 'o', 'o', 'o']
+
+
+# The Caret character '^'
+# when planced after the character class matches all character that are not in the the char class
+# sometimes called matching the negative character class
+
+import re
+
+regX = re.compile('[^aeiou0-4]')
+words = regX.findall("My name is Timz @ Gmail 78903")
+print(words)    # ['M', 'y', ' ', 'n', 'm', ' ', 's', ' ', 'T', 'm', 'z', ' ', '@', ' ', 'G', 'm', 'l', ' ', '7', '8', '9']
