@@ -341,3 +341,17 @@ print(output2.group()) # print all
 # •	 [abc] matches any character between the brackets (such as a, b, or c).
 # •	 [^abc] matches any character that isn’t between the brackets.
 
+
+
+# Case Insensitive Matching:
+# This allows you to pass re.IGNORE or re.I as the second arguement to the re.compile method
+import re
+
+caseRegx = re.compile(r'kenya', re.I)
+case1 = caseRegx.search('KENYA is my country')
+case2 = caseRegx.search('I love Kenya')
+case3 = caseRegx.search('Napenda kenya')
+
+print(case1.group())    #KENYA
+print(case2.group())    #Kenya
+print(case3.group())    #kenya
