@@ -402,3 +402,15 @@ phoneRegex = re.compile(r'''(
  \d{4}                              # last 4 digits
  (\s*(ext|x|ext.)\s*\d{2,5})?       # extension
  )''', re.VERBOSE)
+
+
+#combining Regular expressions 
+# combinign .ingnorecase, .dotail amd verbose
+# only workable when combined using pipe (bitwise operstor)
+# updated is already absolute for use. new method of  doing it ..check python automation
+
+import re
+
+someRegex = re.compile('foo',re.IGNORECASE | re.DOTALL | re.IGNORECASE)
+
+
