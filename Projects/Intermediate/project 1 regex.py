@@ -414,3 +414,36 @@ import re
 someRegex = re.compile('foo',re.IGNORECASE | re.DOTALL | re.IGNORECASE)
 
 
+
+
+
+
+# Extracting phone number and email using Regx
+
+
+# step 1: create a regex for phone  number:
+# import the pyperclip module to help copy and paste text
+
+# step 1: create a regex for phone  number:
+# import the pyperclip module to help copy and paste text
+
+import pyperclip,re
+
+# define your regex for finding phone numbers and emails
+
+phoneRegx = re.compile(r'''(
+    (\d{3}|\(\d{3}\))?   # area code for the phone number
+    (\s|-|\.)           # Separator
+    (\d{3})              # First 3 digits
+    (\s|-|\.)           # Separator
+    (\d{4})             # Last 4 digits
+    (\s*(ext|x|ext.)\s*(\d{2,5}))?  # Extensions
+    )''',re.VERBOSE)
+
+# create the regex for finding email
+emailRegx = re.compile(r'''(
+    [a-zA-Z0-9.%+-]+   # username
+    @                # @symbol
+    [a-zA-Z0-9.-]+   # domain name
+    (\.[a-zA-Z]{2,4}) # dot-something
+    )''', re.VERBOSE)
