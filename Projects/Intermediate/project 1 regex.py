@@ -388,3 +388,17 @@ import re
 namesReg = re.compile(r'Agent (\w)\w*')
 newRegx = namesReg.sub(r'\1****','Agent Timz tole Agent Owen that Agent kim was a double Agent')
 print(newRegx)  # T**** tole O**** that k**** was a double Agent
+
+
+
+# Managing Complex Regex 
+
+# commenting regular expressions 
+phoneRegex = re.compile(r'''(
+ (\d{3}|\(\d{3}\))?                 # area code
+ (\s|-|\.)?                         # separator
+ \d{3}                              # first 3 digits
+ (\s|-|\.)                          # separator
+ \d{4}                              # last 4 digits
+ (\s*(ext|x|ext.)\s*\d{2,5})?       # extension
+ )''', re.VERBOSE)
