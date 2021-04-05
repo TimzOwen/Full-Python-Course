@@ -368,3 +368,16 @@ case3 = caseRegx.search('Napenda kenya')
 print(case1.group())    #KENYA
 print(case2.group())    #Kenya
 print(case3.group())    #kenya
+
+
+# Substituting Strings with the sub() method
+
+# the sub method takes in two argurments (first--> string to replace any matches, second-->regular expression itself)
+
+import re
+
+namesReg = re.compile(r'Timz \w+')
+newRegx = namesReg.sub('owen','Timz was eleccted the new chair and Timz refused')
+print(newRegx)  # owen eleccted the new chair and owen
+
+
