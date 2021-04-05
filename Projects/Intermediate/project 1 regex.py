@@ -381,3 +381,10 @@ newRegx = namesReg.sub('owen','Timz was eleccted the new chair and Timz refused'
 print(newRegx)  # owen eleccted the new chair and owen
 
 
+# using replaceable symbols in Regex.
+
+import re
+
+namesReg = re.compile(r'Agent (\w)\w*')
+newRegx = namesReg.sub(r'\1****','Agent Timz tole Agent Owen that Agent kim was a double Agent')
+print(newRegx)  # T**** tole O**** that k**** was a double Agent
