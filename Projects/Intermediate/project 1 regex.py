@@ -420,6 +420,7 @@ someRegex = re.compile('foo',re.IGNORECASE | re.DOTALL | re.IGNORECASE)
 
 # Extracting phone number and email using Regx
 
+# before running the program make sure you have some text copied in your clipboard 
 
 # step 1: create a regex for phone  number:
 # import the pyperclip module to help copy and paste text
@@ -447,3 +448,23 @@ emailRegx = re.compile(r'''(
     [a-zA-Z0-9.-]+   # domain name
     (\.[a-zA-Z]{2,4}) # dot-something
     )''', re.VERBOSE)
+
+
+# Matches in clipboard
+text = str(pyperclip.paste())
+matches = []
+
+for groups in phoneRegx.findall(text):
+    phoneNum = '-'.join([groups[1], groups[3], groups[5]])
+    if groups[8] != '':
+        phoneNum += ' x' + groups[8]
+    matches.append(phoneNum)
+for groups in emailRegx.findall(text):
+    matches.append(groups[0])
+
+if len(matches) > 0:
+    pyperclip.copy('\n'.join(matches))
+    print('Copied to clipboard:')
+    print('\n'.join(matches))
+else:
+    print('No phone numbers or email addresses found.')
