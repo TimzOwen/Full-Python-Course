@@ -1,7 +1,9 @@
 #### use external readme
+
 ## Full-Python-Course
     
     python from Hello world to fullstack python developer
+    Get to practice about algorithims and data structures
 
 #### Expectations:
 
