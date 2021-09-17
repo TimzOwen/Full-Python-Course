@@ -18,6 +18,6 @@ except ValueError:
     print("Not a valid input, try again ! ")
 
 
-COMMENTS
+# COMMENTS
 "Hash tag used for commenting out code or explanation"
 """----multiple line comment--"""
